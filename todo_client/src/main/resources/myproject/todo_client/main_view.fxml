@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myproject.todo_client.MainViewController">
+   <children>
+      <BorderPane maxHeight="-Infinity">
+         <left>
+            <Label text="ToDo" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </left>
+         <right>
+            <VBox prefHeight="60.0" prefWidth="268.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#handleButtonClear" prefWidth="80.0" style="-fx-background-color: indianred;" text="%key.Clear" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="entrySearch" onAction="#handleEntrySearch" promptText="%key.Search" />
+                        <Button fx:id="buttonNew" mnemonicParsing="false" onAction="#handleButtonNew" prefWidth="80.0" style="-fx-background-color: skyblue;" text="%key.New" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </BorderPane>
+      <Separator prefWidth="200.0">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </Separator>
+      <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="tableColumnTitle" prefWidth="75.0" text="%key.TodoRecordTitle" />
+          <TableColumn fx:id="tableColumnStatus" prefWidth="75.0" text="%key.TodoRecordStatus" />
+            <TableColumn fx:id="tableColumnDueTo" prefWidth="75.0" text="%key.TodoRecordDueTo" />
+        </columns>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="%key.RemainingTime" HBox.hgrow="ALWAYS">
+               <textFill>
+                  <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+               </textFill>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="remainingTimeLabel" maxHeight="1.7976931348623157E308" maxWidth="-1.0">
+               <textFill>
+                  <Color red="0.625" green="0.625" blue="0.625" fx:id="x41" />
+               </textFill>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
