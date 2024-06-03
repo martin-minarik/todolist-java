@@ -4,7 +4,7 @@
 
 # Description
 
-The ToDo app is a Java-based application built using Java2 for managing your todo tasks. It allows users
+The ToDo app is a Java-based application built using JavaFX for managing your todo tasks. It allows users
 to add, remove, and keep track of their to-do items. The application provides a simple and intuitive interface for task
 management. Additionally, data are managed remotely via a Quarkus REST API, ensuring seamless and
 efficient task synchronization and storage.
